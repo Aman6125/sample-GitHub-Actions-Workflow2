@@ -1,0 +1,14 @@
+name: "Multi event pipeline / workflow" # Name of the pipline
+
+on:
+  push: # Event: Whenever a push is made to the repository on the master branch
+    branches:
+      - master
+      - test
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps: # steps to exectied in the jon
+      - name: "Running on master push"
+        run: echo "running on master push"
